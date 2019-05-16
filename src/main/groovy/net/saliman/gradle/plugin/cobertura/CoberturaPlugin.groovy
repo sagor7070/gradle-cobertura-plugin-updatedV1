@@ -128,11 +128,11 @@ class CoberturaPlugin implements Plugin<PluginAware> {
 			try {
 				if ( isAndroidGradlePluginVersion3(project) ) {
 					project.dependencies {
-						testApi 'org.slf4j:slf4j-api:1.7.5'
+						testImplementation 'org.slf4j:slf4j-api:1.8.0-beta4'
 					}
 				} else {
 					project.dependencies {
-						provided 'org.slf4j:slf4j-api:1.7.5'
+						compileOnly 'org.slf4j:slf4j-api:1.8.0-beta4'
 					}
 				}
 			} catch (Exception ignored) { }
